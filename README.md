@@ -155,29 +155,6 @@ DetailsActivity Refresh button
 > Then reference it in the manifest:
 > `android:networkSecurityConfig="@xml/network_security_config"`
 
----
-
-## Running Tests
-
-```bash
-# All unit tests
-./gradlew test
-
-# Per module
-./gradlew :core:test
-./gradlew :feature_listing:test
-./gradlew :feature_details:test
-```
-
-### Test coverage
-
-| Module            | Tests                                             |
-|-------------------|---------------------------------------------------|
-| `:core`           | `UniversityRepositoryImplTest`, `GetUniversitiesUseCaseTest` |
-| `:feature_listing`| `ListingViewModelTest`                            |
-| `:feature_details`| `DetailsViewModelTest`                            |
-
----
 
 ## API
 
