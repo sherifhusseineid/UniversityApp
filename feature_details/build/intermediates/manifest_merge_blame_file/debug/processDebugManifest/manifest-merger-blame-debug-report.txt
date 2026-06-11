@@ -1,0 +1,19 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.university.details" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+6
+7    <application>
+7-->/Users/sherif.hussein/AndroidStudioProjects/UniversityApp/feature_details/src/main/AndroidManifest.xml:3:5-8:19
+8        <activity
+8-->/Users/sherif.hussein/AndroidStudioProjects/UniversityApp/feature_details/src/main/AndroidManifest.xml:4:9-7:76
+9            android:name="com.university.details.ui.DetailsActivity"
+9-->/Users/sherif.hussein/AndroidStudioProjects/UniversityApp/feature_details/src/main/AndroidManifest.xml:5:13-47
+10            android:exported="false"
+10-->/Users/sherif.hussein/AndroidStudioProjects/UniversityApp/feature_details/src/main/AndroidManifest.xml:6:13-37
+11            android:parentActivityName="com.university.app.MainActivity" />
+11-->/Users/sherif.hussein/AndroidStudioProjects/UniversityApp/feature_details/src/main/AndroidManifest.xml:7:13-73
+12    </application>
+13
+14</manifest>

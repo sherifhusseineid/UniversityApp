@@ -1,0 +1,4 @@
+com.university.app.test.app-androidTest-0 /Users/sherif.hussein/AndroidStudioProjects/UniversityApp/app/build/generated/res/resValues/androidTest/debug
+com.university.app.test.app-mergeDebugAndroidTestResources-1 /Users/sherif.hussein/AndroidStudioProjects/UniversityApp/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.university.app.test.app-mergeDebugAndroidTestResources-2 /Users/sherif.hussein/AndroidStudioProjects/UniversityApp/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.university.app.test.app-debugAndroidTest-3 /Users/sherif.hussein/AndroidStudioProjects/UniversityApp/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

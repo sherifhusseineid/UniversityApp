@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.university.core.test.core-mergeDebugAndroidTestResources-21:/values-es/values-es.xml",
+            "map": [
+                {
+                    "source": "/Users/sherif.hussein/.gradle/caches/transforms-4/734ca3742fb5a691658d5fd880e22f71/transformed/core-1.13.1/res/values-es/values-es.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,356,454,561,667,787",
+                        "endColumns": "98,101,99,97,106,105,119,100",
+                        "endOffsets": "149,251,351,449,556,662,782,883"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+com.university.details
+id btnRefresh
+id tvCode
+id tvCountry
+id tvDomains
+id tvName
+id tvState
+id tvStateLabel
+id tvWebPages
+layout activity_details
+string app_name
