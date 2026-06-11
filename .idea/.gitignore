@@ -1,3 +1,39 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+# Built files
+*.iml
+.gradle/
+/local.properties
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# Android Studio
+*.iws
+.idea/
+out/
+.vscode/
+
+# Keystore files
+*.jks
+*.keystore
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Kotlin
+.metalkit/
+
+# Navigation
+nav_graph.xml
+
+# Logs
+*.log
