@@ -1,5 +1,6 @@
 package com.university.core.domain.usecase
 
+import android.util.Log
 import com.university.core.data.repository.UniversityRepository
 import com.university.core.domain.model.University
 import com.university.core.util.Result
@@ -9,6 +10,7 @@ class GetUniversitiesUseCase @Inject constructor(
     private val repository: UniversityRepository
 ) {
     suspend operator fun invoke(forceRefresh: Boolean = false): Result<List<University>> {
+        Log.d("Usecase","Fetching universities with forceRefresh=$forceRefresh")
         return repository.getUniversities(forceRefresh)
     }
 }

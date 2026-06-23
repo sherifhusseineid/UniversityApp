@@ -6,6 +6,5 @@ data class ListingState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val universities: List<University> = emptyList(),
-    val error: String? = null,
-    val navigateToDetails: University? = null
+    val error: String? = null
 )

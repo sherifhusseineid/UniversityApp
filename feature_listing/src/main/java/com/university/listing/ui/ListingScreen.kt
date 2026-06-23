@@ -28,13 +28,18 @@ fun ListingScreen(
     val state by viewModel.state.collectAsState()
     val pullToRefreshState = rememberPullToRefreshState()
 
-    // Handle navigation side effect
-    LaunchedEffect(state.navigateToDetails) {
-        state.navigateToDetails?.let { university ->
-            onNavigateToDetails(university)
-            viewModel.onNavigationHandled()
+    LaunchedEffect(Unit) {
+        viewModel.navigationEvent.collect {
+            onNavigateToDetails(it)
         }
     }
+    // Handle navigation side effect
+//    LaunchedEffect(state.navigateToDetails) {
+//        state.navigateToDetails?.let { university ->
+//            onNavigateToDetails(university)
+//            viewModel.onNavigationHandled()
+//        }
+//    }
 
     Scaffold(
         topBar = {

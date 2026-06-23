@@ -2,12 +2,15 @@ package com.university.listing.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.university.core.domain.model.University
 import com.university.core.domain.usecase.GetUniversitiesUseCase
 import com.university.core.util.Result
 import com.university.listing.intent.ListingIntent
 import com.university.listing.state.ListingState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
@@ -22,6 +25,9 @@ class ListingViewModel @Inject constructor(
     private val _state = MutableStateFlow(ListingState())
     val state: StateFlow<ListingState> = _state.asStateFlow()
 
+    val _navigationEvent = MutableSharedFlow<University>()
+    val navigationEvent: SharedFlow<University> = _navigationEvent
+
     init {
         processIntent(ListingIntent.LoadUniversities)
     }
@@ -31,15 +37,19 @@ class ListingViewModel @Inject constructor(
             is ListingIntent.LoadUniversities -> loadUniversities(forceRefresh = false)
             is ListingIntent.RefreshUniversities -> loadUniversities(forceRefresh = true)
             is ListingIntent.SelectUniversity -> {
-                val university = _state.value.universities.find { it.name == intent.universityName }
-                _state.update { it.copy(navigateToDetails = university) }
+                viewModelScope.launch {
+                    val university = _state.value.universities.find { it.name == intent.universityName }
+                    university.let {
+                        it?.let { value -> _navigationEvent.emit(value) }
+                    }
+                }
             }
         }
     }
 
-    fun onNavigationHandled() {
-        _state.update { it.copy(navigateToDetails = null) }
-    }
+//    fun onNavigationHandled() {
+//        _state.update { it.copy(navigateToDetails = null) }
+//    }
 
     private fun loadUniversities(forceRefresh: Boolean) {
         viewModelScope.launch {
